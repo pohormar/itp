@@ -7,7 +7,7 @@ Aplikacja webowa, która automatyzuje i wspomaga proces upraszczania złożonych
 *   **Backend:** FastAPI
 *   **Frontend:** Streamlit
 *   **Orkiestracja AI:** LangChain
-*   **Model Językowy:** Google Gemini 1.5 Pro
+*   **Model Językowy:** Google Gemini 2.5 Pro
 *   **Baza Wektorowa (RAG):** ChromaDB
 *   **Przetwarzanie/Generowanie PDF:** PyMuPDF / xhtml2pdf
 
@@ -20,7 +20,7 @@ Aplikacja webowa, która automatyzuje i wspomaga proces upraszczania złożonych
     ```
 
 2.  **Utwórz plik `.env`:**
-    Skopiuj plik `.env.example` (jeśli istnieje) lub utwórz nowy plik o nazwie `.env`. Wewnątrz pliku wklej swój klucz API do Google Gemini:
+    Utwórz nowy plik o nazwie `.env`. Wewnątrz pliku wklej swój klucz API do Google Gemini:
     ```
     GEMINI_API_KEY="AI..."
     ```
