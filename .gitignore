@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# Database
+chroma_db/
+
+# Data and Knowledge Base
+data/
+knowledge_base/
+
+# IDE and OS specific
+.idea/
+.vscode/
+.DS_Store
+
+# Logs
+*.log
+
+# Secrets
+.env 

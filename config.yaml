@@ -1,0 +1,36 @@
+llm:
+  # Główny model używany do analizy, upraszczania i formatowania
+  main_model: "gemini-2.5-pro"
+  # Model używany do walidacji i krytyki (może być ten sam lub inny)
+  validator_model: "gemini-2.5-pro"
+  # Temperatura - wyższa wartość to większa kreatywność, niższa to większa spójność
+  seed: 42
+
+agents:
+  analyst:
+    prompt_path: "prompts/agent1_analyst"
+    temperature: 0.0
+  criticality_validator:
+    prompt_path: "prompts/agent2_criticality_validator"
+    temperature: 0.0
+  simplifier:
+    prompt_path: "prompts/agent3_simplifier"
+    temperature: 0.7
+  qa_formatter:
+    prompt_path: "prompts/agent4_qa_formatter"
+    temperature: 0.0
+
+chromadb:
+  path: "chroma_db"
+  embedding_model: "models/text-embedding-004"
+  collections:
+    main:
+      # Ta kolekcja jest budowana dynamicznie z dokumentu użytkownika.
+      # Służy do analizy wewnątrz-dokumentowej (Intra-Document RAG).
+      - "placeholder.txt"
+    simplifier:
+      - "eu_plain_language_summary.md"
+      - "plain_language_summary.md"
+    formatter:
+      - "digital_accessibility_best_practices.md"
+      - "wcag_2_1_summary.md" 
