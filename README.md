@@ -15,8 +15,8 @@ Aplikacja webowa, która automatyzuje i wspomaga proces upraszczania złożonych
 
 1.  **Sklonuj repozytorium:**
     ```bash
-    git clone <adres-repozytorium>
-    cd <nazwa-katalogu-projektu>
+    git clone https://github.com/pohormar/itp.git
+    cd itp
     ```
 
 2.  **Utwórz plik `.env`:**
