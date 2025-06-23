@@ -57,4 +57,3 @@ Your goal is to reformat the provided text, which includes simplifications and c
 Oto tekst do sformatowania:
 {simplified_text_with_criticism}
 
-</rewritten_file> 

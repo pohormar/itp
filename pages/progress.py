@@ -26,7 +26,6 @@ if "processing" not in st.session_state or "upload_data" not in st.session_state
     time.sleep(2) # Krótka pauza, aby użytkownik zobaczył wiadomość
     st.switch_page("app.py")
 
-# OSTATECZNE ROZWIĄZANIE PROBLEMU Z IMPORTEM:
 # Ręcznie dodajemy główny katalog projektu do ścieżki Pythona.
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
@@ -127,7 +126,7 @@ def run_analysis_pipeline(upload_data, timer_placeholder):
     
     finally:
         st.session_state.processing = False
-        # KLUCZOWA POPRAWKA: Jawne polecenie przerysowania interfejsu
+        # Jawne polecenie przerysowania interfejsu
         st.rerun()
 
 # --- Główny widok strony ---
@@ -166,9 +165,3 @@ with col2:
             else:
                 st.session_state.review_required = False
                 st.switch_page("pages/compare.py")
-
-        # Ten blok jest teraz niepotrzebny, ponieważ cała logika jest w powyższych dwóch blokach
-        # elif not st.session_state.upload_data:
-        #     st.warning("Brak danych do przetworzenia. Proszę wrócić do strony głównej.")
-        #     if st.button("Powrót do strony głównej"):
-        #         reset_to_upload() 

@@ -6,7 +6,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from chromadb.api.types import EmbeddingFunction, Documents, Embeddings
 
-# --- Adapter (Przejściówka) ---
+# --- Adapter ---
 # Ta klasa rozwiązuje problem z niekompatybilną "wtyczką" (sygnaturą metody).
 class ChromaDBEmbeddingFunctionAdapter(EmbeddingFunction):
     """
